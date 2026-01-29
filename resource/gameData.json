@@ -1,0 +1,125 @@
+{
+  "characters": [
+    {
+      "id": "parrot",
+      "type": "Parrot",
+      "name": "Papoušek"
+    },
+    {
+      "id": "native",
+      "type": "Native",
+      "name": "Domorodec"
+    },
+    {
+      "id": "monkey",
+      "type": "Monkey",
+      "name": "Opice"
+    },
+    {
+      "id": "goat",
+      "type": "Goat",
+      "name": "Koza"
+    }
+  ],
+
+  "rooms": [
+    {
+      "id": "beach",
+      "name": "Pláž",
+      "description": "Písčitá pláž s vrakem lodi.",
+      "blocked": false,
+      "exits": {
+        "north": "jungle"
+      },
+      "items": ["radio"],
+      "character": null
+    },
+    {
+      "id": "jungle",
+      "name": "Džungle",
+      "description": "Husta tropická džungle, na stromě sedí papoušek.",
+      "blocked": false,
+      "exits": {
+        "south": "beach",
+        "north": "cave",
+        "east": "camp"
+      },
+      "items": ["fruit", "stick"],
+      "character": "parrot"
+    },
+    {
+      "id": "camp",
+      "name": "Starý kemp",
+      "description": "Jednoduchý přístřešek s ohništěm, žije zde domorodec jménem Mako.",
+      "blocked": false,
+      "exits": {
+        "west": "jungle",
+        "north": "swamp",
+        "south": "waterfall"
+      },
+      "items": ["tape", "table", "campfire"],
+      "character": "native"
+    },
+    {
+      "id": "waterfall",
+      "name": "Vodopád",
+      "description": "Velký vodopád s pruchodem do skály, stojí zde koza.",
+      "blocked": false,
+      "exits": {
+        "north": "camp",
+        "south": "ruins"
+      },
+      "items": null,
+      "characters": "goat"
+    },
+    {
+      "id": "ruins",
+      "name": "Trosky",
+      "description": "Další pláž ostrova, všude jsou další trosky z lodi.",
+      "blocked": true,
+      "exits": {
+        "north": "waterfall"
+      },
+      "items": ["antenna"],
+      "characters": null
+    },
+    {
+      "id": "swamp",
+      "name": "Bažina",
+      "description": "Rozbahněný terén s hustou mlhou, pohyb je zde obtížný a viditelnost špatná.",
+      "blocked": false,
+      "exits": {
+        "south": "camp",
+        "west": "cave"
+      },
+      "items": ["leather"],
+      "characters": null
+    },
+    {
+      "id": "cave",
+      "name": "Jeskyně",
+      "description": "Tmavá jeskyně s průchodem dal do hory, žije zde opice.",
+      "blocked": true,
+      "exits": {
+        "north": "mountain_peak",
+        "south": "jungle",
+        "east": "swamp"
+      },
+      "items": ["battery", "salt"],
+      "characters": "monkey"
+    },
+    {
+      "id": "mountain_peak",
+      "name": "Vrchol hory",
+      "description": "Nejvyšší bod ostrova, všude je krásný výhled.",
+      "blocked": false,
+      "exits": {
+        "south": "cave"
+      },
+      "items": null,
+      "characters": null
+    }
+  ],
+
+  "items": []
+}
