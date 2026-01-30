@@ -70,7 +70,7 @@
         "south": "ruins"
       },
       "items": null,
-      "characters": "goat"
+      "character": "goat"
     },
     {
       "id": "ruins",
@@ -81,7 +81,7 @@
         "north": "waterfall"
       },
       "items": ["antenna"],
-      "characters": null
+      "character": null
     },
     {
       "id": "swamp",
@@ -93,7 +93,7 @@
         "west": "cave"
       },
       "items": ["leather"],
-      "characters": null
+      "character": null
     },
     {
       "id": "cave",
@@ -106,7 +106,7 @@
         "east": "swamp"
       },
       "items": ["battery", "salt"],
-      "characters": "monkey"
+      "character": "monkey"
     },
     {
       "id": "mountain_peak",
@@ -117,9 +117,80 @@
         "south": "cave"
       },
       "items": null,
-      "characters": null
+      "character": null
     }
   ],
 
-  "items": []
+  "items": [
+    {
+      "id": "radio",
+      "type": "Radio",
+      "name": "Vysílačka",
+      "description": "Poškozená lodní vysílačka.",
+      "portable": true
+    },
+    {
+      "id": "antenna",
+      "type": "Antenna",
+      "name": "Anténa",
+      "description": "Ohnutá kovová anténa k zesílení signálu.",
+      "portable": true
+    },
+    {
+      "id": "battery",
+      "type": "Battery",
+      "name": "Baterie",
+      "description": "Opotřebovaná ale funkční baterie.",
+      "portable": true
+    },
+    {
+      "id": "tape",
+      "type": "Tape",
+      "name": "Provázek",
+      "description": "Pevný kousek provázku.",
+      "portable": true
+    },
+    {
+      "id": "leather",
+      "type": "Leather",
+      "name": "Kousek kůže",
+      "description": "Silný kus vysušené kůže.",
+      "portable": true
+    },
+    {
+      "id": "stick",
+      "type": "Stick",
+      "name": "Klacek",
+      "description": "Větší kus spadlé větve.",
+      "portable": true
+    },
+    {
+      "id": "salt",
+      "type": "Salt",
+      "name": "Sůl",
+      "description": "Hrubá krystalická sůl z jeskyně.",
+      "portable": true
+    },
+    {
+      "id": "fruit",
+      "type": "Fruit",
+      "name": "Ovoce",
+      "description": "Tropické ovoce z džungle.",
+      "portable": true
+    },
+    {
+      "id": "table",
+      "type": "Table",
+      "name": "Stůl",
+      "description": "Pracovní stůl vhodný pro opravu vysílačky..",
+      "portable": false
+    },
+    {
+      "id": "campfire",
+      "type": "CampFire",
+      "name": "Ohniště",
+      "description": "Hořící ohniště uprostřed kempu.",
+      "portable": false
+    }
+  ]
 }

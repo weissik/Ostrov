@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class Room {
 
+    private String id;
     private String name;
     private String description;
     private HashMap<String, Room> exits;

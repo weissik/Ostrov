@@ -4,6 +4,7 @@ import game.Player;
 
 public abstract class Item {
 
+    protected String id;
     protected String name;
     protected String description;
     protected boolean portable;

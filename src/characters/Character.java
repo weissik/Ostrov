@@ -5,6 +5,7 @@ import world.Room;
 
 public abstract class Character {
 
+    protected String id;
     protected String name;
     protected Room room;
 
