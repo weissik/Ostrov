@@ -13,6 +13,18 @@ public class GameData {
     public ArrayList<RoomData> rooms;
     public ArrayList<ItemData> items;
 
+    public ArrayList<CharacterData> getCharacters() {
+        return characters;
+    }
+
+    public ArrayList<RoomData> getRooms() {
+        return rooms;
+    }
+
+    public ArrayList<ItemData> getItems() {
+        return items;
+    }
+
     public static GameData loadGameData(String filePath) {
 
         Gson gson = new Gson();
