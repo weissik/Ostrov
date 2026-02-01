@@ -18,7 +18,16 @@ public abstract class Item {
 
     public abstract void use(Player player);
 
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public boolean isPortable(){
+        return portable;
     }
 
 

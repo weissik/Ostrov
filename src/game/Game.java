@@ -10,6 +10,13 @@ public class Game {
     private CommandParser parser;
     private boolean running;
 
+    public Game(World world, Player player, CommandParser parser) {
+        this.world = world;
+        this.player = player;
+        this.parser = parser;
+        this.running = false;
+    }
+
     public void start(){
     }
 
@@ -17,10 +24,13 @@ public class Game {
     }
 
     public void endGame(){
+        running = false;
     }
 
     public boolean isRunning(){
+        return running;
     }
+
 
 
 

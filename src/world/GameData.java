@@ -25,6 +25,12 @@ public class GameData {
         return items;
     }
 
+    public GameData() {
+        characters = new ArrayList<>();
+        rooms = new ArrayList<>();
+        items = new ArrayList<>();
+    }
+
     public static GameData loadGameData(String filePath) {
 
         Gson gson = new Gson();

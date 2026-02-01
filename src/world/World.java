@@ -9,6 +9,7 @@ public class World {
 
     public World(HashMap<String, Room> rooms) {
         this.rooms = rooms;
+        this.startingRoom = rooms.get("beach");
     }
 
     public HashMap<String, Room> getRooms() {
@@ -20,6 +21,7 @@ public class World {
     }
 
     public Room getStartingRoom(){
+        return startingRoom;
     }
 
     public void setStartingRoom(Room startingRoom) {

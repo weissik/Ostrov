@@ -10,8 +10,12 @@ public abstract class Character {
 
     public abstract void interact(Player player);
 
-    public Character(String name, String id) {
-        this.name = name;
+    public Character(String id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
