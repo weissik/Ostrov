@@ -1,5 +1,6 @@
 package world;
 
+import game.Dictionary;
 import items.Item;
 import characters.Character;
 
@@ -23,6 +24,10 @@ public class Room {
         this.blocked = blocked;
         exits = new HashMap<>();
         items = new ArrayList<>();
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void addExit(String direction, Room room){
@@ -76,5 +81,19 @@ public class Room {
         for (Item item : items) sb.append(item.getName()).append(", ");
         sb.delete(sb.length()-2, sb.length());
         return sb.toString();
+    }
+
+    public String printExits() {
+        StringBuilder sb = new StringBuilder();
+        for (String key : exits.keySet()) {
+            sb.append(Dictionary.translate(key)).append(", ");
+        }
+        sb.delete(sb.length()-2, sb.length());
+        return sb.toString();
+    }
+
+    public void getInfo() {
+        System.out.println("-- " + name + " --");
+        System.out.println("Cesty: " + printExits());
     }
 }

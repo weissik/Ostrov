@@ -15,64 +15,31 @@ public class WorldBuilder {
         HashMap<String, Character> characterMap = new HashMap<>();
 
         for (CharacterData data : gameData.getCharacters()){
-            Character character;
-            switch(data.getType()) {
-                case "Parrot":
-                    character = new Parrot(data.getId(), data.getName());
-                    break;
-                case "Native":
-                    character = new Native(data.getId(), data.getName());
-                    break;
-                case "Monkey":
-                    character = new Monkey(data.getId(), data.getName());
-                    break;
-                case "Goat":
-                    character = new Goat(data.getId(), data.getName());
-                    break;
-                default:
-                    throw new IllegalStateException("Neznámý typ postavy.");
-            }
+            Character character = switch (data.getType()) {
+                case "Parrot" -> new Parrot(data.getId(), data.getName());
+                case "Native" -> new Native(data.getId(), data.getName());
+                case "Monkey" -> new Monkey(data.getId(), data.getName());
+                case "Goat" -> new Goat(data.getId(), data.getName());
+                default -> throw new IllegalStateException("Neznámý typ postavy.");
+            };
             characterMap.put(data.getId(), character);
         }
 
         HashMap<String, Item> itemMap = new HashMap<>();
 
         for (ItemData data : gameData.getItems()){
-            Item item;
-            switch (data.getType()){
-                case "Radio":
-                    item = new Radio(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Antenna":
-                    item = new Antenna(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Battery":
-                    item = new Battery(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Tape":
-                    item = new Tape(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Leather":
-                    item = new Leather(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Stick":
-                    item = new Stick(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Fruit":
-                    item = new Fruit(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Salt":
-                    item = new Salt(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "CampFire":
-                    item = new CampFire(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                case "Table":
-                    item = new Table(data.getId(), data.getName(), data.getDescription(), data.isPortable());
-                    break;
-                default:
-                    throw new IllegalStateException("Neznámý typ předmětu.");
-            }
+            Item item = switch (data.getType()) {
+                case "Radio" -> new Radio(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Antenna" -> new Antenna(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Battery" -> new Battery(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Tape" -> new Tape(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Leather" -> new Leather(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Stick" -> new Stick(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Fruit" -> new Fruit(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "Salt" -> new Salt(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                case "CampFire" -> new CampFire(data.getId(), data.getName(), data.getDescription(), data.isPortable());
+                default -> throw new IllegalStateException("Neznámý typ předmětu.");
+            };
             itemMap.put(data.getId(), item);
         }
 

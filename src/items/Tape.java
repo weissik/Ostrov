@@ -10,6 +10,12 @@ public class Tape extends Item{
 
     @Override
     public void use(Player player) {
+
+        if (player.getRadio() == null) throw new WrongUseException("Bez vysílačky je ti provazek na nic");
+
+        player.getRadio().repairStep();
+        System.out.println("Uspěšně jsi upevnil vysílačku");
+
     }
 
 }

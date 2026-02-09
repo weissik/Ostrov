@@ -26,6 +26,15 @@ public class Inventory {
        items.remove(item);
     }
 
+    public void removeItemById(String id) {
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getId().equals(id)) {
+                items.remove(i);
+                return;
+            }
+        }
+    }
+
     public Item getItem(String itemName) {
         for (Item item : items){
             if (item.getId().equals(itemName)) return item;
@@ -42,6 +51,15 @@ public class Inventory {
         for (Item item : items) sb.append(item.getName()).append(", ");
         sb.delete(sb.length()-2, sb.length());
         return sb.toString();
+    }
+
+
+    public void getInfo() {
+        if (!items.isEmpty()) {
+            System.out.println("Inventář: " + printItems());
+        } else {
+            System.out.println("Inventář je prázdný");
+        }
     }
 
 }

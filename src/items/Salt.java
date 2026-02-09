@@ -10,6 +10,9 @@ public class Salt extends Item{
 
     @Override
     public void use(Player player) {
+
+        if (!player.getCurrentRoom().getId().equals("waterfall")) throw new WrongUseException("Sůl zde nelze použít");
+
     }
 
 }

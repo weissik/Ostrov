@@ -57,7 +57,7 @@
         "north": "swamp",
         "south": "waterfall"
       },
-      "items": ["tape", "table", "campfire"],
+      "items": ["tape", "campfire"],
       "character": "native"
     },
     {
@@ -177,13 +177,6 @@
       "name": "Ovoce",
       "description": "Tropické ovoce z džungle.",
       "portable": true
-    },
-    {
-      "id": "table",
-      "type": "Table",
-      "name": "Stůl",
-      "description": "Pracovní stůl vhodný pro opravu vysílačky..",
-      "portable": false
     },
     {
       "id": "campfire",

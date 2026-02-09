@@ -3,6 +3,8 @@ package commands;
 import game.Game;
 import game.Player;
 import items.Item;
+import items.Radio;
+import items.Salt;
 import world.World;
 
 public class UseCommand implements ArgumentCommand{
@@ -24,8 +26,11 @@ public class UseCommand implements ArgumentCommand{
         Item item = player.getCurrentRoom().getItem(argument);
 
         if (item != null && !item.isPortable()) {
+
             item.use(player);
+            game.getWorld().getRoom("cave").setBlocked(false);
             return;
+
         }
 
         item = player.getInventory().getItem(argument);
@@ -34,7 +39,18 @@ public class UseCommand implements ArgumentCommand{
             throw new WrongCommandException("Takový předmět nemáš");
         }
 
+        if (item instanceof Salt) {
+
+            item.use(player);
+            game.getWorld().getRoom("ruins").setBlocked(false);
+            player.getInventory().removeItem(item);
+
+        }
+
         item.use(player);
+        player.getInventory().removeItem(item);
+
+        if (item instanceof Radio radio && radio.isRepaired()) game.endGame();
 
     }
 

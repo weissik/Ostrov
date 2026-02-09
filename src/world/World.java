@@ -12,6 +12,10 @@ public class World {
         this.startingRoom = rooms.get("beach");
     }
 
+    public Room getRoom(String id) {
+        return rooms.get(id);
+    }
+
     public HashMap<String, Room> getRooms() {
         return rooms;
     }

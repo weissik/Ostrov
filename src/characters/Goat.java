@@ -10,6 +10,9 @@ public class Goat extends Character{
 
     @Override
     public void interact(Player player) {
+
+        System.out.println("Koza blokuje cestu dál a ignoruje tě");
+
     }
 
 }

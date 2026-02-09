@@ -1,5 +1,7 @@
 package commands;
 
+import characters.Monkey;
+import characters.Native;
 import game.Game;
 import game.Player;
 import items.Item;
@@ -25,6 +27,20 @@ public class TakeCommand implements ArgumentCommand{
 
         if (!item.isPortable()){
             throw new WrongCommandException("Předmět nelze sebrat");
+        }
+
+        if (item.getId().equals("tape")) {
+            Native character = (Native) player.getCurrentRoom().getCharacter();
+            if (!character.isGiven()) {
+                throw new WrongCommandException("Provázek patří domorodci, nemůžeš si ho jen tak vzít");
+            }
+        }
+
+        if (item.getId().equals("battery")) {
+            Monkey character = (Monkey) player.getCurrentRoom().getCharacter();
+            if (!character.isGiven()) {
+                throw new WrongCommandException("Opice si baterii střeží a nepustí tě k ní");
+            }
         }
 
         if (player.getInventory().isFull()){
