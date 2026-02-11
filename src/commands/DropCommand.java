@@ -29,6 +29,7 @@ public class DropCommand implements ArgumentCommand{
 
         player.getInventory().removeItem(item);
         player.getCurrentRoom().addItem(item);
+        System.out.println("Uspěšně si položil předmět");
 
     }
 

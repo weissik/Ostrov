@@ -21,7 +21,7 @@ public class Stick extends Item{
 
         if (!isOnFire) throw new WrongUseException("Samotný klacek k ničemu není, ale mohl mohl by se hodit pro pochodeň");
 
-        if (!player.getCurrentRoom().getId().equals("jungle")) throw new WrongUseException("Hořící klacek lze použít pouze před vstupem do jeskyně");
+        if (!player.getCurrentRoom().getId().equals("jungle") || !player.getCurrentRoom().getId().equals("swamp")) throw new WrongUseException("Pochodeň lze použít pouze před vstupem do jeskyně");
 
         player.getCurrentRoom().getExit("north").setBlocked(false);
         System.out.println("Pochodní jsi rozsvítil v jeskyni, nyní můžeš dál");

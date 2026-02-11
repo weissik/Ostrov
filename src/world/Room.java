@@ -1,5 +1,6 @@
 package world;
 
+import game.Colors;
 import game.Dictionary;
 import items.Item;
 import characters.Character;
@@ -9,11 +10,11 @@ import java.util.HashMap;
 
 public class Room {
 
-    private String id;
-    private String name;
-    private String description;
-    private HashMap<String, Room> exits;
-    private ArrayList<Item> items;
+    private final String id;
+    private final String name;
+    private final String description;
+    private final HashMap<String, Room> exits;
+    private final ArrayList<Item> items;
     private Character character;
     private boolean blocked;
 
@@ -24,6 +25,10 @@ public class Room {
         this.blocked = blocked;
         exits = new HashMap<>();
         items = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getId() {
@@ -62,6 +67,7 @@ public class Room {
     }
 
     public void setBlocked(boolean blocked){
+        this.blocked = blocked;
     }
 
     public Character getCharacter() {
@@ -78,8 +84,7 @@ public class Room {
 
     public String printItems(){
         StringBuilder sb = new StringBuilder();
-        for (Item item : items) sb.append(item.getName()).append(", ");
-        sb.delete(sb.length()-2, sb.length());
+        for (Item item : items) sb.append(Colors.paint(Colors.YELLOW, item.getName())).append(" - ").append(item.getDescription()).append("\n");
         return sb.toString();
     }
 
@@ -92,8 +97,4 @@ public class Room {
         return sb.toString();
     }
 
-    public void getInfo() {
-        System.out.println("-- " + name + " --");
-        System.out.println("Cesty: " + printExits());
-    }
 }

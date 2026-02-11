@@ -7,7 +7,7 @@ import world.Room;
 public class Player {
 
     private Room  currentRoom;
-    private Inventory inventory;
+    private final Inventory inventory;
 
 
 
@@ -23,13 +23,8 @@ public class Player {
         return null;
     }
 
-
     public Room getCurrentRoom() {
         return currentRoom;
-    }
-
-    public void setCurrentRoom(Room currentRoom) {
-        this.currentRoom = currentRoom;
     }
 
     public Inventory getInventory() {

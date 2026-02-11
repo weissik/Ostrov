@@ -71,8 +71,7 @@ public class WorldBuilder {
             }
         }
 
-        World world = new World(roomMap);
-        return world;
+        return new World(roomMap);
     }
 
 }

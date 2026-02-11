@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class Inventory {
 
-    private ArrayList<Item> items;
-    private int capacity;
+    private final ArrayList<Item> items;
+    private final int capacity;
 
     public Inventory(int capacity) {
         this.capacity = capacity;
@@ -56,9 +56,9 @@ public class Inventory {
 
     public void getInfo() {
         if (!items.isEmpty()) {
-            System.out.println("Inventář: " + printItems());
+            System.out.println(Colors.paint(Colors.CYAN, "Inventář: ")+ printItems());
         } else {
-            System.out.println("Inventář je prázdný");
+            System.out.println(Colors.paint(Colors.CYAN, "Inventář je prázdný"));
         }
     }
 

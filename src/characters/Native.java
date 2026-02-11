@@ -23,7 +23,7 @@ public class Native extends Character{
     public void interact(Player player) {
 
         if (!given) {
-            System.out.println("Měl bych pro tebe provazek, který by se ti mohl hodit, ale chci za neěj nějakou kůži");
+            System.out.println("Měl bych pro tebe provázek, který by se ti mohl hodit, ale chci za něj nějakou kůži");
         } else {
             System.out.println("Za jeskyní je vrchol hory odtamtud by šel dobře vyslat signál");
         }

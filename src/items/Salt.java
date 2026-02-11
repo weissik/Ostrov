@@ -13,6 +13,7 @@ public class Salt extends Item{
 
         if (!player.getCurrentRoom().getId().equals("waterfall")) throw new WrongUseException("Sůl zde nelze použít");
 
+        System.out.println("Pomocí soli jsi odlákal kozu, nyní můžeš jít dál");
     }
 
 }

@@ -7,7 +7,6 @@ public class Main {
 
         Game game = Game.LOAD_GAME();
         game.runGame();
-
-
+        
     }
 }

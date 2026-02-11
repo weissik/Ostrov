@@ -11,10 +11,6 @@ public class UseCommand implements ArgumentCommand{
 
     private String argument;
 
-    public String getArgument() {
-        return argument;
-    }
-
     @Override
     public void setArgument(String argument) {
         this.argument = argument;
@@ -28,7 +24,6 @@ public class UseCommand implements ArgumentCommand{
         if (item != null && !item.isPortable()) {
 
             item.use(player);
-            game.getWorld().getRoom("cave").setBlocked(false);
             return;
 
         }
@@ -50,7 +45,10 @@ public class UseCommand implements ArgumentCommand{
         item.use(player);
         player.getInventory().removeItem(item);
 
-        if (item instanceof Radio radio && radio.isRepaired()) game.endGame();
+        if (item instanceof Radio radio && radio.isRepaired()) {
+            game.win();
+            game.endGame();
+        }
 
     }
 

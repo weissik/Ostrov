@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class CommandParser {
 
-    private HashMap<String, Command> commands;
+    private final HashMap<String, Command> commands;
 
     public CommandParser() {
         commands = new HashMap<>();
@@ -31,8 +31,7 @@ public class CommandParser {
             throw new WrongCommandException("Neznámý příkaz");
         }
 
-        if (command instanceof ArgumentCommand){
-            ArgumentCommand argumentCommand = (ArgumentCommand) command;
+        if (command instanceof ArgumentCommand argumentCommand){
             try {
                 argumentCommand.setArgument(Dictionary.translate(parts[1]));
             } catch (ArrayIndexOutOfBoundsException e) {

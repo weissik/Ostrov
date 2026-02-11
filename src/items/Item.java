@@ -26,6 +26,10 @@ public abstract class Item {
         return name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public boolean isPortable(){
         return portable;
     }

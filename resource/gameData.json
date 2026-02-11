@@ -26,7 +26,7 @@
     {
       "id": "beach",
       "name": "Pláž",
-      "description": "Písčitá pláž s vrakem lodi.",
+      "description": "Jemný písek se táhne podél pobřeží a vlny tiše narážejí do břehu.\nTrosky lodi leží rozeseté po okolí. Vzduch je slaný a těžký.",
       "blocked": false,
       "exits": {
         "north": "jungle"
@@ -37,7 +37,7 @@
     {
       "id": "jungle",
       "name": "Džungle",
-      "description": "Husta tropická džungle, na stromě sedí papoušek.",
+      "description": "Husté stromy a liány téměř blokují výhled.\nZ dálky slyšíš neznámé zvuky zvířat.Vzduch je vlhký a těžko se tu dýchá.\nNa stromě sedí papušek a dívá se na tebe.",
       "blocked": false,
       "exits": {
         "south": "beach",
@@ -50,7 +50,7 @@
     {
       "id": "camp",
       "name": "Starý kemp",
-      "description": "Jednoduchý přístřešek s ohništěm, žije zde domorodec jménem Mako.",
+      "description": "Zbytky starého tábora naznačují, že tu někdo přežívá.\nOhniště doutná hřejícím plamenem, okolí působí relativně bezpečně. Stojí zde stan a u něj sedí dmorodec.",
       "blocked": false,
       "exits": {
         "west": "jungle",
@@ -63,7 +63,7 @@
     {
       "id": "waterfall",
       "name": "Vodopád",
-      "description": "Velký vodopád s pruchodem do skály, stojí zde koza.",
+      "description": "Silný proud vody padá z vysoké skály do jezírka pod ní.\nVzduch je plný jemné vodní tříště. Ve skále je malý průchod na drou stranu ostrova a u něj stojí koza.",
       "blocked": false,
       "exits": {
         "north": "camp",
@@ -75,7 +75,7 @@
     {
       "id": "ruins",
       "name": "Trosky",
-      "description": "Další pláž ostrova, všude jsou další trosky z lodi.",
+      "description": "Rozlámané části lodi leží rozházené po okolí.\nDřevo je popraskané a kov zrezivělý. Něco z toho by se dalo ještě využít.",
       "blocked": true,
       "exits": {
         "north": "waterfall"
@@ -86,7 +86,7 @@
     {
       "id": "swamp",
       "name": "Bažina",
-      "description": "Rozbahněný terén s hustou mlhou, pohyb je zde obtížný a viditelnost špatná.",
+      "description": "Měkká půda se pod tebou nebezpečně propadá v husté mlze.\nVzduch je těžký a zapáchá zatuchlinou. Každý krok tu může být riskantní.",
       "blocked": false,
       "exits": {
         "south": "camp",
@@ -98,7 +98,7 @@
     {
       "id": "cave",
       "name": "Jeskyně",
-      "description": "Tmavá jeskyně s průchodem dal do hory, žije zde opice.",
+      "description": "Temná jeskyně působí chladně a tísnivě.\nNa stěnách jsou vlhké mapy a ozvěna zesiluje každý zvuk. Sedí zde na zemi opice a za ní se něco leskne.",
       "blocked": true,
       "exits": {
         "north": "mountain_peak",
@@ -111,7 +111,7 @@
     {
       "id": "mountain_peak",
       "name": "Vrchol hory",
-      "description": "Nejvyšší bod ostrova, všude je krásný výhled.",
+      "description": "Z vrcholu je vidět celý ostrov i širé moře.\nVítr tu fouká silně a neustále. Je to ideální místo pro vyslání záchraného signálu.",
       "blocked": false,
       "exits": {
         "south": "cave"

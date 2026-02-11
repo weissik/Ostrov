@@ -49,6 +49,7 @@ public class TakeCommand implements ArgumentCommand{
 
         player.getCurrentRoom().removeItem(item);
         player.getInventory().addItem(item);
+        System.out.println("Sebral jsi předmět");
 
     }
 
