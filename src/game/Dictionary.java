@@ -2,6 +2,9 @@ package game;
 
 import java.util.HashMap;
 
+/**
+ * Class represents a dictionary used to translate user input
+ */
 public class Dictionary {
 
     public static HashMap<String, String> dictionary = new HashMap<>();
@@ -28,6 +31,11 @@ public class Dictionary {
 
     }
 
+    /**
+     * Translates user input
+     * @param string user input
+     * @return corresponding word from the dictionary
+     */
     public static String translate(String string) {
         return dictionary.get(string);
 

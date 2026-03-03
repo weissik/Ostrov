@@ -2,6 +2,9 @@ package items;
 
 import game.Player;
 
+/**
+ * Class represents one item in the game
+ */
 public abstract class Item {
 
     protected String id;

@@ -2,6 +2,9 @@ package characters;
 
 import game.Player;
 
+/**
+ * Class represents a native which can trade with the player or give him advice
+ */
 public class Native extends Character{
 
     private boolean given;
@@ -11,6 +14,9 @@ public class Native extends Character{
         this.given = false;
     }
 
+    /**
+     * Sets given to true
+     */
     public void give() {
         given = true;
     }
@@ -19,6 +25,10 @@ public class Native extends Character{
         return given;
     }
 
+    /**
+     * Prints advices from the native
+     * @param player the player who is interacting
+     */
     @Override
     public void interact(Player player) {
 

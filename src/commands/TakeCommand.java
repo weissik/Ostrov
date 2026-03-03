@@ -7,6 +7,9 @@ import game.Player;
 import items.Item;
 import world.World;
 
+/**
+ * Class represents a command for taking items
+ */
 public class TakeCommand implements ArgumentCommand{
 
     private String argument;
@@ -16,6 +19,13 @@ public class TakeCommand implements ArgumentCommand{
         this.argument = argument;
     }
 
+    /**
+     * Checks whether the argument is a real item that can be taken and
+     * if the player has full inventory then adds it to the players inventory
+     * @param game whole game
+     * @param player the player using this command
+     * @param world game world rooms and items
+     */
     @Override
     public void execute(Game game, Player player, World world) {
 

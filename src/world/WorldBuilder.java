@@ -8,8 +8,16 @@ import items.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class is for building a World from loaded data
+ */
 public class WorldBuilder {
 
+    /**
+     * Builds a real game World with all items, characters and locations loaded in GameData
+     * @param gameData GamaData object filled with all loaded data
+     * @return a World object with all data
+     */
     public static World buildWorld(GameData gameData){
 
         HashMap<String, Character> characterMap = new HashMap<>();

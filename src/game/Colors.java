@@ -1,5 +1,8 @@
 package game;
 
+/**
+ * Class used for colors to make the text more clear
+ */
 public class Colors {
 
     public static final String RED = "\u001B[31m";

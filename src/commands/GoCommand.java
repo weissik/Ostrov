@@ -5,6 +5,9 @@ import game.Player;
 import world.Room;
 import world.World;
 
+/**
+ * Class represents a command for moving on the map
+ */
 public class GoCommand implements ArgumentCommand{
 
     private String argument;
@@ -14,6 +17,12 @@ public class GoCommand implements ArgumentCommand{
         this.argument = argument;
     }
 
+    /**
+     * Checks if argument is a real direction where the player can go and moves the player there
+     * @param game whole game
+     * @param player the player using this command
+     * @param world game world rooms and items
+     */
     @Override
     public void execute(Game game, Player player, World world) {
 

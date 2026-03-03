@@ -7,6 +7,9 @@ import items.Radio;
 import items.Salt;
 import world.World;
 
+/**
+ * Class represents a command for using a specific item
+ */
 public class UseCommand implements ArgumentCommand{
 
     private String argument;

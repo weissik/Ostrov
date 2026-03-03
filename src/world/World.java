@@ -2,6 +2,9 @@ package world;
 
 import java.util.HashMap;
 
+/**
+ * This class represents the game world with all rooms and a starting room
+ */
 public class World {
 
     private final HashMap<String, Room> rooms;

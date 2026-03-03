@@ -7,6 +7,10 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+/**
+ * Represents the game data loaded from a JSON file
+ * This class is a container for all game content - items, characters, locations
+ * */
 public class GameData {
 
     public ArrayList<CharacterData> characters;
@@ -31,6 +35,11 @@ public class GameData {
         items = new ArrayList<>();
     }
 
+    /**
+     * Loads data from a JSON file
+     * @param filePath path to the recourse file
+     * @return GameData object filled with the loaded data
+     */
     public static GameData loadGameData(String filePath) {
 
         Gson gson = new Gson();

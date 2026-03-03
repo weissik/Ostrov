@@ -1,5 +1,8 @@
 package world;
 
+/**
+ * This class serves for String item data loaded from a file
+ */
 public class ItemData {
 
     private String id;

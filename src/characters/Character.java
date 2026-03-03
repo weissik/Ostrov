@@ -3,6 +3,9 @@ package characters;
 import game.Player;
 import world.Room;
 
+/**
+ * Class represents one character in a game
+ */
 public abstract class Character {
 
     protected String id;

@@ -3,6 +3,9 @@ package world;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * This class serves for String room data loaded from a file
+ */
 public class RoomData {
 
     private String id;

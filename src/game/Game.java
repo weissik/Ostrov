@@ -11,6 +11,9 @@ import world.WorldBuilder;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class represents the whole game with all features
+ */
 public class Game {
 
     private final World world;
@@ -42,10 +45,17 @@ public class Game {
         return world;
     }
 
+    /**
+     * Sets win to true
+     */
     public void win() {
         this.won = true;
     }
 
+    /**
+     * Loads game from a file
+     * @return Game object filled with all data
+     */
     public static Game LOAD_GAME(){
 
         GameData data = GameData.loadGameData("/gameData.json");
@@ -57,6 +67,9 @@ public class Game {
 
     }
 
+    /**
+     * Runs game loop
+     */
     public void runGame() {
         introductoryText();
         running = true;
@@ -81,6 +94,10 @@ public class Game {
 
     }
 
+    /**
+     * Process a command from user input
+     * @param input user input
+     */
     public void processCommand(String input){
         try {
             parser.parse(input).execute(this, player, world);
@@ -89,6 +106,9 @@ public class Game {
         }
     }
 
+    /**
+     * Ends game and prints all info
+     */
     public void endGame(){
         running = false;
         if (won) {
@@ -108,6 +128,9 @@ public class Game {
         }
     }
 
+    /**
+     * Prints text for introduction
+     */
     public void introductoryText() {
         System.out.println("\n === OSTROV ===\n\n" +
                 "Temné mraky se rychle stahují a mořská hladina se začíná bouřit. Co mělo být obyčejným školním výletem se během" +
@@ -122,6 +145,9 @@ public class Game {
                 "Tvá cesta začíná… teď.");
     }
 
+    /**
+     * Prints all info for the game loop
+     */
     public void info() {
         System.out.println("=== " + Colors.paint(Colors.RED, player.getCurrentRoom().getName()) + " ===" );
         System.out.println(Colors.paint(Colors.YELLOW, player.getCurrentRoom().getDescription()));
@@ -130,6 +156,9 @@ public class Game {
         player.getInventory().getInfo();
     }
 
+    /**
+     * Prints a list of all possible command to use
+     */
     public void printCommands(){
         System.out.println(Colors.paint(Colors.CYAN, "\nDostupné příkazy:"));
         for (String command : commands) System.out.println(command);

@@ -1,5 +1,8 @@
 package world;
 
+/**
+ * This class serves for String character data loaded from a file
+ */
 public class CharacterData {
 
     private String id;

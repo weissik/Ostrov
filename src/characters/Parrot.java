@@ -2,6 +2,9 @@ package characters;
 
 import game.Player;
 
+/**
+ * Class represents a parrot which gives advice
+ */
 public class Parrot extends Character{
 
 
@@ -9,6 +12,10 @@ public class Parrot extends Character{
         super(name, id);
     }
 
+    /**
+     * Prints advice from the parrot
+     * @param player the player who is interacting
+     */
     @Override
     public void interact(Player player) {
 

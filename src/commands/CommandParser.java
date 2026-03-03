@@ -4,6 +4,9 @@ import game.Dictionary;
 
 import java.util.HashMap;
 
+/**
+ * Class represents a parser for all commands
+ */
 public class CommandParser {
 
     private final HashMap<String, Command> commands;
@@ -21,6 +24,11 @@ public class CommandParser {
         commands.put("konec", new EndCommand());
     }
 
+    /**
+     * Parses a user input and makes a command
+     * @param input user input
+     * @return wanted command based on user input
+     */
     public Command parse(String input) throws ArrayIndexOutOfBoundsException {
 
         String[] parts = input.trim().split(" ", 2);

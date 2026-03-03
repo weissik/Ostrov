@@ -3,11 +3,19 @@ package items;
 import characters.Monkey;
 import game.Player;
 
+/**
+ * Class represents fruit used to feed the monkey
+ */
 public class Fruit extends Item{
+
     public Fruit(String id, String name, String description, boolean portable) {
         super(id, name, description, portable);
     }
 
+    /**
+     * Checks whether the player can use the fruit and then exchanges it for a battery
+     * @param player player using this item
+     */
     @Override
     public void use(Player player) {
 

@@ -8,6 +8,9 @@ import characters.Character;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * This class represents one room (location) in the game
+ */
 public class Room {
 
     private final String id;
@@ -47,9 +50,14 @@ public class Room {
         items.add(item);
     }
 
-    public Item getItem(String itemName){
+    /**
+     * Finds an item in the room based on id
+     * @param itemId id of the wanted item
+     * @return actual wanted item
+     */
+    public Item getItem(String itemId){
         for (Item item : items){
-            if (item.getId().equals(itemName)) return item;
+            if (item.getId().equals(itemId)) return item;
         }
         return null;
     }
@@ -82,12 +90,20 @@ public class Room {
         return description;
     }
 
+    /**
+     * Returs a String of all items in the room
+     * @return String of all items
+     */
     public String printItems(){
         StringBuilder sb = new StringBuilder();
         for (Item item : items) sb.append(Colors.paint(Colors.YELLOW, item.getName())).append(" - ").append(item.getDescription()).append("\n");
         return sb.toString();
     }
 
+    /**
+     * Returns a String of all possible ways out of the room
+     * @return String of all exits
+     */
     public String printExits() {
         StringBuilder sb = new StringBuilder();
         for (String key : exits.keySet()) {
