@@ -25,24 +25,14 @@ public class UseCommand implements ArgumentCommand{
         Item item = player.getCurrentRoom().getItem(argument);
 
         if (item != null && !item.isPortable()) {
-
             item.use(player);
             return;
-
         }
 
         item = player.getInventory().getItem(argument);
 
         if (item == null) {
             throw new WrongCommandException("Takový předmět nemáš");
-        }
-
-        if (item instanceof Salt) {
-
-            item.use(player);
-            game.getWorld().getRoom("ruins").setBlocked(false);
-            player.getInventory().removeItem(item);
-
         }
 
         item.use(player);

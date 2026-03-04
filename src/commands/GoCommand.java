@@ -38,7 +38,12 @@ public class GoCommand implements ArgumentCommand{
         }
 
         if (nextRoom.isBlocked()){
-            throw new WrongCommandException("Aktuálně nelze jít dál, cesta je zablokovaná");
+            if (player.getCurrentRoom().getId().equals("waterfall")) {
+                throw new WrongCommandException("V cestě dál ti stojí koza.");
+            } else {
+                throw new WrongCommandException("V jeskyni je příliš velké tma, bylo by nebezpečné jít tam bez světla.");
+            }
+
         }
 
         player.moveTo(nextRoom);

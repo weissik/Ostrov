@@ -29,7 +29,7 @@ public class Stick extends Item{
     @Override
     public void use(Player player) {
 
-        if (!isOnFire) throw new WrongUseException("Samotný klacek k ničemu není, ale mohl mohl by se hodit pro pochodeň");
+        if (!isOnFire) throw new WrongUseException("Samotná větev ti k ničemu není, ale mohla by se hodit jako zaklad pro pochodeň.");
 
         if (player.getCurrentRoom().getId().equals("jungle")) {
             player.getCurrentRoom().getExit("north").setBlocked(false);
@@ -38,7 +38,7 @@ public class Stick extends Item{
             player.getCurrentRoom().getExit("west").setBlocked(false);
             System.out.println("Pochodní jsi rozsvítil v jeskyni, nyní můžeš dál");
         } else {
-            throw new WrongUseException("Pochodeň lze použít pouze před vstupem do jeskyně");
+            throw new WrongUseException("Pochodeň lze použít pouze před vstupem do jeskyně.");
         }
 
 

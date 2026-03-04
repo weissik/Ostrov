@@ -1,5 +1,6 @@
 package items;
 
+import characters.Goat;
 import game.Player;
 
 /**
@@ -18,8 +19,10 @@ public class Salt extends Item{
     @Override
     public void use(Player player) {
 
-        if (!player.getCurrentRoom().getId().equals("waterfall")) throw new WrongUseException("Sůl zde nelze použít");
+        if (!(player.getCurrentRoom().getCharacter() instanceof Goat character)) throw new WrongUseException("Sůl se hodí pro odlakaní kozy.");
 
+        character.give();
+        player.getCurrentRoom().getExit("south").setBlocked(false);
         System.out.println("Pomocí soli jsi odlákal kozu, nyní můžeš jít dál");
     }
 

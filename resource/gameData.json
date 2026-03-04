@@ -160,7 +160,7 @@
     {
       "id": "stick",
       "type": "Stick",
-      "name": "Klacek",
+      "name": "Větev",
       "description": "Větší kus spadlé větve.",
       "portable": true
     },

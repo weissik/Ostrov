@@ -22,7 +22,7 @@ public class CampFire extends Item{
 
         Stick item = (Stick) player.getInventory().getItem("stick");
         item.setOnFire();
-        System.out.println("Zapálil jsi pochodeň");
+        System.out.println("Zapálil si větev a nyní maš pochodeň.");
 
     }
 }

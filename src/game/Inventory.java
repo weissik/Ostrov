@@ -87,9 +87,9 @@ public class Inventory {
      */
     public void getInfo() {
         if (!items.isEmpty()) {
-            System.out.println(Colors.paint(Colors.CYAN, "Inventář: ")+ printItems());
+            System.out.println(Colors.paint(Colors.YELLOW, "Inventář: ")+ printItems());
         } else {
-            System.out.println(Colors.paint(Colors.CYAN, "Inventář je prázdný"));
+            System.out.println(Colors.paint(Colors.YELLOW, "Inventář je prázdný"));
         }
     }
 

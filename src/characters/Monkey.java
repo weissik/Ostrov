@@ -33,9 +33,9 @@ public class Monkey extends Character{
     public void interact(Player player) {
 
         if (given) {
-            System.out.println("Opice si spokojeni ji ovoce a nevšímá si tě.");
+            System.out.println("Opice si spokojeně jí ovoce a nevšímá si tě.");
         } else {
-            System.out.println("Opice tě tiše pozoruje a brání ti v tom vzít si baterii.");
+            System.out.println("Opice tě tiše pozoruje a má u sebe něco blízkavého co si chrání.");
         }
 
     }

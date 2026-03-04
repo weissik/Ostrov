@@ -19,7 +19,7 @@ public class Dictionary {
         dictionary.put("baterie", "battery");
         dictionary.put("provazek", "tape");
         dictionary.put("kousek kuze", "leather");
-        dictionary.put("klacek", "stick");
+        dictionary.put("vetev", "stick");
         dictionary.put("sul", "salt");
         dictionary.put("ovoce", "fruit");
         dictionary.put("stul", "table");
