@@ -40,9 +40,11 @@ public class TakeCommand implements ArgumentCommand{
         }
 
         if (item.getId().equals("tape")) {
-            Native character = (Native) player.getCurrentRoom().getCharacter();
-            if (!character.isGiven()) {
-                throw new WrongCommandException("Provázek patří domorodci, nemůžeš si ho jen tak vzít");
+            if (player.getCurrentRoom().getId().equals("camp")) {
+                Native character = (Native) player.getCurrentRoom().getCharacter();
+                if (!character.isGiven()) {
+                    throw new WrongCommandException("Provázek patří domorodci, nemůžeš si ho jen tak vzít");
+                }
             }
         }
 
